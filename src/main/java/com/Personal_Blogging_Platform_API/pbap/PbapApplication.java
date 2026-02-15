@@ -9,5 +9,4 @@ public class PbapApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PbapApplication.class, args);
 	}
-
 }

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.Personal_Blogging_Platform_API.pbap.PbapApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.963 s -- in com.Personal_Blogging_Platform_API.pbap.PbapApplicationTests
