@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Articles API</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>📰 Articles</h1>
+
+<section>
+<h2>Create</h2>
+<input id="title" placeholder="Title">
+<textarea id="description" placeholder="Description"></textarea>
+<button onclick="createArticle()">Create</button>
+</section>
+
+<section>
+<h2>All Articles</h2>
+<button onclick="loadArticles()">Refresh</button>
+<div id="articles"></div>
+</section>
+
+<section>
+<h2>Get by ID</h2>
+<input id="searchId" placeholder="ID">
+<button onclick="getById()">Search</button>
+<pre id="single"></pre>
+</section>
+
+<section>
+<h2>Update</h2>
+<input id="updateId" placeholder="ID">
+<input id="updateTitle" placeholder="New title">
+<textarea id="updateDescription" placeholder="New description"></textarea>
+<button onclick="updateArticle()">Update</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
