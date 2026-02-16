@@ -21,4 +21,20 @@ public class ArticlesService {
     public List<ArticlesEntity> findAll(){
         return articlesRepository.findAll();
     }
+
+    public ArticlesEntity getById(Integer id){
+        return articlesRepository.findById(id).orElse(null);
+    }
+
+    public void deletArticle (Integer id){
+        articlesRepository.deleteById(id);
+    }
+
+    public ArticlesEntity updateById(Integer id, ArticlesEntity newData){
+        ArticlesEntity article = articlesRepository.findById(id).orElseThrow(() -> new RuntimeException("Artigo nao encotrado"));
+        article.setTitle(newData.getTitle());
+        article.setDescription(newData.getDescription());
+
+        return articlesRepository.save(article);
+    }
 }

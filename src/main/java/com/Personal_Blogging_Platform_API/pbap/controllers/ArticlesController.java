@@ -24,8 +24,26 @@ public class ArticlesController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<ArticlesEntity> findById(@PathVariable Integer id){
+        ArticlesEntity articlesEntity = this.articlesService.getById(id);
+        return ResponseEntity.ok(articlesEntity);
+    }
+
     @GetMapping()
     public ResponseEntity<List<ArticlesEntity>> getAll(){
         return ResponseEntity.ok(articlesService.findAll());
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteArticles (@PathVariable Integer id){
+        this.articlesService.deletArticle(id);
+        return ResponseEntity.ok().build();
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity updateArticles (@PathVariable Integer id, @RequestBody ArticlesEntity newData){
+        ArticlesEntity updated = articlesService.updateById(id, newData);
+        return ResponseEntity.ok().build();
     }
 }

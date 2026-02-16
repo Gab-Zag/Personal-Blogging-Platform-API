@@ -38,8 +38,8 @@ public class ArticlesEntity {
         return this.title;
     }
 
-    public String getDesciption(){
-        return this.description;
+    public String getDescription() {
+        return description;
     }
 
     public LocalDateTime getCreationdata(){
@@ -50,7 +50,7 @@ public class ArticlesEntity {
         this.title = title;
     }
 
-    public void setDesciption(String desciption){
+    public void setDescription(String description) {
         this.description = description;
     }
 
